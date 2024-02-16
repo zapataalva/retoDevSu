@@ -9,5 +9,7 @@ public class CheckoutPage {
     public static final Target CAMPO_CODIGO_POSTAL = Target.the("Campo del codigo postal").located(By.id("postal-code"));
     public static final Target BTN_CHECKOUT = Target.the("Boton checkout").located(By.id("checkout"));
     public static final Target BTN_CONTINUAR = Target.the("Boton continuar").located(By.id("continue"));
+    public static final Target ITEM_TOTAL = Target.the("Item total").located(By.className("summary_subtotal_label"));
+    public static final Target BTN_FINALIZAR = Target.the("Boton finalizar").located(By.id("finish"));
 
 }
