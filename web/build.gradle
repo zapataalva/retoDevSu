@@ -19,6 +19,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-junit5:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-ensure:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
     implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.0.0-alpha1'
 }
 

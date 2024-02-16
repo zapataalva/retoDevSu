@@ -3,6 +3,8 @@ package com.saucedemo.stepdefinitions;
 import com.saucedemo.questions.ObtenerProductos;
 import com.saucedemo.tasks.CompraProducto;
 import com.saucedemo.tasks.InicioSesion;
+import com.saucedemo.tasks.ValidaInformacion;
+import com.saucedemo.utils.Data;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.actions.Open;
@@ -12,6 +14,7 @@ import java.util.List;
 
 import static com.saucedemo.utils.Constantes.PASS;
 import static com.saucedemo.utils.Constantes.USUARIO;
+import static com.saucedemo.utils.Data.nuevoUsuario;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class CompraProductosStepDefinition {
@@ -27,7 +30,8 @@ public class CompraProductosStepDefinition {
     @When("Realizo una compra de productos")
     public void realizoUnaCompraDeProductos() {
         List<String> productos = theActorInTheSpotlight().asksFor(ObtenerProductos.de());
-        theActorInTheSpotlight().attemptsTo(CompraProducto.con(productos));
+        theActorInTheSpotlight().attemptsTo(CompraProducto.con(productos),
+                ValidaInformacion.del(nuevoUsuario()));
     }
     @Then("Se debe visualizar el mensaje {string}")
     public void seDebeVisualizarElMensaje(String mensajeEsperado) {
