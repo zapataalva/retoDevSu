@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'com.petstore'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'com.intuit.karate:karate-junit5:1.2.0.RC4'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets{
+    test{
+        resources{
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+}
+task karateDebug(type: JavaExec) {
+    classpath = sourceSets.test.runtimeClasspath
+}
