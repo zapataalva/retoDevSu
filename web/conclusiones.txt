@@ -1,0 +1,6 @@
+Conclusiones:
+
+* A pesar de que la página web tiene un sistema de login implementado, se ha identificado que los usuarios pueden acceder directamente a un path específico sin necesidad de autenticarse previamente.
+* Los elementos de la página web en su mayoría tienen identificadores o clases unicas lo que facilitó el desarrollo de la automatización de manera más efectiva y eficiente.
+* La página no cuenta con un stock de productos, lo cual no se pueden comprar más de 1 cantidad por producto.
+* El icono del carrito de compras no está creado como botón, lo que puede ocasionar confusión sobre su funcionalidad.
