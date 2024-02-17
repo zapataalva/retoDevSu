@@ -27,7 +27,7 @@ public class InicioSesion implements Task {
         );
     }
 
-    public static InicioSesion con(String usuario, String pass){
+    public static InicioSesion con(String usuario, String pass) {
         return Tasks.instrumented(InicioSesion.class, usuario, pass);
     }
 }

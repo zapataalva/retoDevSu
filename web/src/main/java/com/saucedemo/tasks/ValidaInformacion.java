@@ -28,7 +28,7 @@ public class ValidaInformacion implements Task {
         );
     }
 
-    public static ValidaInformacion del(Usuario usuario){
+    public static ValidaInformacion del(Usuario usuario) {
         return Tasks.instrumented(ValidaInformacion.class, usuario);
     }
 }

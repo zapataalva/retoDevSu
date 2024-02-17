@@ -11,5 +11,7 @@ public class CheckoutPage {
     public static final Target BTN_CONTINUAR = Target.the("Boton continuar").located(By.id("continue"));
     public static final Target ITEM_TOTAL = Target.the("Item total").located(By.className("summary_subtotal_label"));
     public static final Target BTN_FINALIZAR = Target.the("Boton finalizar").located(By.id("finish"));
+    public static final Target MSG_COMPRA_COMPLETADA = Target.the("Mensaje de compra completada")
+            .located(By.className("complete-header"));
 
 }

@@ -18,7 +18,7 @@ public class RecordarProducto implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.remember("producto"+idProducto, producto);
+        actor.remember("producto" + idProducto, producto);
     }
 
     public static RecordarProducto con(int idProducto, Producto producto) {
